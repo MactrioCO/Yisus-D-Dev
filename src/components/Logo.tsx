@@ -1,10 +1,12 @@
-/** Marca Yisus D Dev — logo oficial en /logo.png + wordmark. */
+import { asset } from "../lib/assets";
+
+/** Marca Yisus D Dev - logo oficial en /logo.png + wordmark. */
 export default function Logo({ compact = false }: { compact?: boolean }) {
   return (
-    <span className="group inline-flex items-center gap-2.5" aria-label="Yisus D Dev — inicio">
+    <span className="group inline-flex items-center gap-2.5" aria-label="Yisus D Dev - inicio">
       <span className="relative h-10 w-10 shrink-0 rounded-full bg-gradient-to-br from-violet-600 via-blue-600 to-cyan-400 p-[2px] shadow-[0_8px_24px_-8px_rgba(139,92,246,0.7)]">
         <img
-          src="/logo.png"
+          src={asset("logo.png")}
           alt="Logo de Yisus D Dev"
           width={40}
           height={40}

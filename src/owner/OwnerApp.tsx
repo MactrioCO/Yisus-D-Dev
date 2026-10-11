@@ -1,5 +1,6 @@
 import { Bell, FolderKanban, Images, Inbox as InboxIcon, LayoutDashboard, LogOut, Newspaper, ScrollText, Settings, Shapes, Users, Wrench } from "lucide-react";
 import { useEffect, useState } from "react";
+import { asset } from "../lib/assets";
 import { logActivity, OwnerAuthProvider, useOwnerAuth } from "../lib/owner-auth";
 import { isSupabaseConfigured } from "../lib/supabase";
 import { ActivityView, BotSettings, SiteSettings } from "./ConfigPanels";
@@ -79,7 +80,7 @@ function Login() {
   return (
     <div className="grid min-h-screen place-items-center bg-[#05070d] p-5">
       <form onSubmit={submit} className="glass w-full max-w-md rounded-2xl p-8" aria-label="Acceso del propietario">
-        <img src="/logo.png" alt="Yisus D Dev" width={56} height={56} className="mx-auto rounded-full" />
+        <img src={asset("logo.png")} alt="Yisus D Dev" width={56} height={56} className="mx-auto rounded-full" />
         <h1 className="font-display mt-4 text-center text-xl font-bold text-white">OWNER PANEL</h1>
         <p className="font-mono2 mt-1 text-center text-[11px] uppercase tracking-[0.3em] text-slate-500">
           {mode === "in" ? "acceso privado" : mode === "up" ? "crear cuenta" : "recuperar acceso"}
@@ -153,7 +154,7 @@ function Shell() {
     <div className="min-h-screen bg-[#05070d] text-slate-200 lg:flex">
       <aside className="border-b border-white/10 bg-[#04060b] p-4 lg:min-h-screen lg:w-60 lg:shrink-0 lg:border-b-0 lg:border-r">
         <a href="#/" className="flex items-center gap-2.5">
-          <img src="/logo.png" alt="Yisus D Dev" width={36} height={36} className="rounded-full" />
+          <img src={asset("logo.png")} alt="Yisus D Dev" width={36} height={36} className="rounded-full" />
           <span className="font-display text-sm font-bold tracking-widest text-white">OWNER <span className="text-gradient">PANEL</span></span>
         </a>
         <nav className="mt-5 flex gap-1.5 overflow-x-auto lg:flex-col" aria-label="Administración">

@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { asset } from "../lib/assets";
 
 const TERMINAL_LINES = ["$ yisusddev init --portfolio", "✓ entorno listo · react + ts + tailwind", "✓ identidad visual cargada", "→ revelando contenido…"];
 
@@ -70,7 +71,7 @@ export default function Preloader({ onDone }: { onDone: () => void }) {
             >
               <span className="absolute -inset-2 rounded-full bg-gradient-to-br from-violet-600/60 via-blue-500/40 to-cyan-400/50 blur-md" aria-hidden />
               <img
-                src="/logo.png"
+                src={asset("logo.png")}
                 alt="Logo de Yisus D Dev"
                 width={96}
                 height={96}

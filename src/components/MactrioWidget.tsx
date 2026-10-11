@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Loader2, RotateCcw, Send, User, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { asset } from "../lib/assets";
 import type { PublicContent } from "../lib/cms";
 import { answerQuestion } from "../lib/mactrio/engine";
 import { getSupabase } from "../lib/supabase";
@@ -179,7 +180,7 @@ export default function MactrioWidget({ content }: { content: PublicContent }) {
         {open ? (
           <X size={22} />
         ) : (
-          <img src="/mactrio-bot.png" alt="" width={44} height={44} draggable={false} className="h-11 w-11 rounded-full object-cover ring-2 ring-white/30" />
+          <img src={asset("mactrio-bot.png")} alt="" width={44} height={44} draggable={false} className="h-11 w-11 rounded-full object-cover ring-2 ring-white/30" />
         )}
       </button>
 
@@ -195,7 +196,7 @@ export default function MactrioWidget({ content }: { content: PublicContent }) {
             className="glass fixed! bottom-[168px] right-5 z-[65] flex h-[min(560px,62vh)] w-[min(380px,calc(100vw-2.5rem))] flex-col overflow-hidden rounded-2xl shadow-2xl"
           >
             <header className="flex items-center gap-3 border-b border-white/10 bg-black/30 px-4 py-3">
-              <img src="/mactrio-bot.png" alt="" width={36} height={36} className="h-9 w-9 shrink-0 rounded-full object-cover ring-1 ring-white/15" />
+              <img src={asset("mactrio-bot.png")} alt="" width={36} height={36} className="h-9 w-9 shrink-0 rounded-full object-cover ring-1 ring-white/15" />
               <div className="min-w-0 flex-1">
                 <p className="font-display text-sm font-bold text-white">Mactrio Bot</p>
                 <p className="font-mono2 truncate text-[11px] text-slate-500">
@@ -221,7 +222,7 @@ export default function MactrioWidget({ content }: { content: PublicContent }) {
                         <User size={14} />
                       </span>
                     ) : (
-                      <img src="/mactrio-bot.png" alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded-full object-cover ring-1 ring-white/10" />
+                      <img src={asset("mactrio-bot.png")} alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded-full object-cover ring-1 ring-white/10" />
                     )
                   )}
                   <p className={`max-w-[80%] whitespace-pre-line rounded-2xl px-3.5 py-2.5 text-[13.5px] leading-relaxed ${
