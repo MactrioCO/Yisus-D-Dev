@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yisus-d-dev.example.com/sitemap.xml
